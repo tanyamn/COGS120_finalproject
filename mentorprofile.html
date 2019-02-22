@@ -4,6 +4,7 @@
 <head>
 	<title>My Profile</title>	
 	<link rel="stylesheet" href="mentorprofileCSS.css">	
+	<link rel="stylesheet" href="mentorprofileJS.js">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	      
 </head>
 
@@ -49,20 +50,33 @@
 		</form>
 	</div>
 
-<!-- Connect me button -->
-	<button class="open-button" onclick="openForm()">Connect Me!</button>
+<!-- Resume button, not necessary for mentor profile -->
+	<div class ="button">
+		<p> Resume: <button onclick="myFunction()">Upload File</button> </p>
+
+
+		<script>
+			function myFunction() {
+				var x = document.createElement("INPUT");
+				x.setAttribute("type", "file");
+				document.body.appendChild(x);
+			}
+		</script>
+
+<!-- Connect me button - in progress
 	<div class="chat-popup" id="myForm">
-  		<form action="messages.html" class="form-container">
-    	<h1>Connect Me!</h1>
+  		<form action="/action_page.php" class="form-container">
+    	<h1>Chat</h1>
 
     	<label for="msg"><b>Message</b></label>
-    	<textarea placeholder="Type message.." name="msg" required></textarea>
+    	<textarea placeholder="Type message.." name="msg" required><textarea>
 
-    	<button type="submit" class="btn" onclick="location.href='messages.html'">Send</button>
+    	<button type="submit" class="btn">Send</button>
     	<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   		</form>
 	</div>
 
+-->
 
 
 
@@ -76,7 +90,7 @@
 	<br><br>
 
 	<div class="icon-bar">
-		<a href="index.html"><i class="fa fa-home"></i></a>
+		<a href="home.html"><i class="fa fa-home"></i></a>
 		<a class="active" href="search.html"><i class="fa fa-search"></i></a>
 		<a href="messages.html"><i class="fa fa-commenting-o"></i></a>
 		<a href="myprofile.html"><i class="fa fa-user-circle"></i></a>
@@ -85,7 +99,7 @@
 
 
 
-	<script src="mentorprofileJS.js"></script>
+
 
 
 </div>			
